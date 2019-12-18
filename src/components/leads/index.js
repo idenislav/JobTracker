@@ -37,5 +37,4 @@ class Leads extends Component {
     }
 }
 
-
 export default Leads;

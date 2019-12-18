@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import About from '../pages/About';
 import Leads from '../components/leads';
+import Dashboard from '../pages/Dashboard';
 
 
 export default function Routes() {
@@ -24,6 +25,9 @@ export default function Routes() {
             <li>
               <Link to="/leads">Leads</Link>
             </li>
+            <li>
+                <Link to="/Dashboard">Dashboard</Link>
+            </li>
           </ul>
         </nav>
 
@@ -36,8 +40,8 @@ export default function Routes() {
           <Route path="/leads">
             <Leads />
           </Route>
-          <Route path="/">
-            {/* <Home /> */}
+          <Route path="/Dashboard"> 
+             <Dashboard /> 
           </Route>
         </Switch>
       </div>
