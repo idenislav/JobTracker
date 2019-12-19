@@ -2,7 +2,15 @@ import React, { Component } from "react";
 import { LEADS_API } from "../../config/coms";
 
 class NewLead extends Component {
-  state = {};
+  state = {
+    status: "",
+      position: "",
+      company: "",
+      applied_thru: "",
+      date_applied: new Date().toDateString(),
+      updated_date: "",
+      links: "",
+  };
 
   handleSubmit = e => {
     e.preventDefault();
@@ -32,12 +40,48 @@ class NewLead extends Component {
     return (
       <>
         <form onSubmit={this.handleSubmit}>
+        {/* <input 
+            name="date_applied"
+            value={this.state.date_applied}
+            onChange={this.handleChange}
+            type="text"
+            visability="hidden"
+          /> */}
           <input
             name="company"
             type="text"
             placeholder="Company"
             onChange={this.handleChange}
           />
+          <input
+            name="position"
+            type="text"
+            placeholder="position"
+            onChange={this.handleChange}
+          />
+          
+          <input
+            name="jobLink"
+            type="text"
+            placeholder="jobLink"
+            onChange={this.handleChange}
+          />
+          <select
+              name="applied_thru"
+              value={this.state.applied_thru}
+              onChange={this.handleChange}
+            >
+              <option value="blank" />
+              <option value="LINKEDIN">LinkedIn</option>
+              <option value="DICE">Dice</option>
+              <option value="GOOGLE">Google</option>
+              <option value="KSL">KSL</option>
+              <option value="INDEED">Indeed</option>
+              <option value="COMPANY">Company</option>
+              <option value="SOCIAL">Social</option>
+              <option value="NETWORKING">Networking</option>
+              <option value="OTHER">Other</option>
+            </select>
           <button type="submit">Submit</button>
         </form>
       </>

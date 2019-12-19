@@ -29,9 +29,9 @@ class Leads extends Component {
     render(){
         return (
           <>
-            Job Tracker
+            New Lead
             <NewLead reload={this.getLeads} />
-            <div className='flexbox-row'>{this.state.leads}</div>
+            
           </>
         );
     }

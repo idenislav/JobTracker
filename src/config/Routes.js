@@ -23,7 +23,7 @@ export default function Routes() {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/leads">Leads</Link>
+              <Link to="/leads"> New Lead</Link>
             </li>
             <li>
                 <Link to="/Dashboard">Dashboard</Link>

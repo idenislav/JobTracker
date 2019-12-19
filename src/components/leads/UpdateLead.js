@@ -11,9 +11,8 @@ class UpdateLead extends React.Component {
       company: this.props.lead.company,
       applied_thru: this.props.lead.applied_thru,
       date_applied: this.props.lead.date_applied,
-      updated_date: this.props.lead.updated_date,
+      updated_date: new Date().toDateString(),
       links: this.props.lead.links,
-      currentDate: new Date().toDateString()
     };
   }
 
@@ -78,6 +77,7 @@ class UpdateLead extends React.Component {
               value={this.state.applied_thru}
               onChange={this.handleChange}
             >
+              <option value="blank" />
               <option value="LINKEDIN">LinkedIn</option>
               <option value="DICE">Dice</option>
               <option value="GOOGLE">Google</option>
@@ -88,9 +88,10 @@ class UpdateLead extends React.Component {
               <option value="NETWORKING">Networking</option>
               <option value="OTHER">Other</option>
             </select>
+            <textarea type="text" placeholder="Comments..."></textarea>
             date applied:
             <input
-              type="date"
+              type="text"
               value={this.state.date_applied}
               onChange={this.handleChange}
               name="date_applied"
