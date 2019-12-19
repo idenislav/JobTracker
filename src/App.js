@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import Leads from './components/leads';
+//import Leads from './components/leads';
 import Routes from './config/Routes';
 
 

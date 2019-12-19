@@ -3,7 +3,7 @@ import { LEADS_API } from "../../config/coms";
 
 class NewLead extends Component {
   state = {
-    status: "",
+      status: "",
       position: "",
       company: "",
       applied_thru: "",
@@ -66,6 +66,18 @@ class NewLead extends Component {
             placeholder="jobLink"
             onChange={this.handleChange}
           />
+          <select
+            name="status"
+            value={this.state.status}
+            onChange={this.handleChange}
+            >
+              <option value="" />
+              <option value="Applied" >Applied</option>
+              <option value="Rejected" >Rejected</option>
+              <option value="Accepted" >Accepted</option>
+
+          </select>
+
           <select
               name="applied_thru"
               value={this.state.applied_thru}
