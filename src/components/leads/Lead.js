@@ -2,10 +2,12 @@ import React from "react"
 import CustomModal from "../../config/Modal";
 import UpdateLead from "./UpdateLead"
 import DeleteLead from "./DeleteLead";
+import "../../Styles/App.css";
 
 const Lead = ({ leadData, reload }) => {
     return (
       <div id={leadData._id}>
+        <div>{leadData.status}</div>
         <div>{leadData.position}</div>
         <div>{leadData.company}</div>
         <div>{leadData.applied_thru}</div>

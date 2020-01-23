@@ -1,5 +1,6 @@
 import React from "react";
 import { LEADS_API } from "../../config/coms";
+import "../../Styles/App.css";
 
 class DeleteLead extends React.Component {
  

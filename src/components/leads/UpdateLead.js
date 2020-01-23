@@ -1,5 +1,6 @@
 import React from "react";
 import { LEADS_API } from "../../config/coms";
+import "../../Styles/App.css";
 
 class UpdateLead extends React.Component {
   constructor(props) {
@@ -45,7 +46,7 @@ class UpdateLead extends React.Component {
   render() {
     return (
           <form className='flexbox-col' onSubmit={this.handleSubmit}>
-            position: <input 
+            position: <select 
               type="text"
               onChange={this.handleChange}
               name="position"

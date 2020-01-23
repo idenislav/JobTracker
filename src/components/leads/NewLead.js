@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { LEADS_API } from "../../config/coms";
+import "../../Styles/App.css";
 
 class NewLead extends Component {
   state = {
@@ -53,12 +54,6 @@ class NewLead extends Component {
             placeholder="Company"
             onChange={this.handleChange}
           />
-          <input
-            name="position"
-            type="text"
-            placeholder="position"
-            onChange={this.handleChange}
-          />
           
           <input
             name="jobLink"
@@ -66,16 +61,16 @@ class NewLead extends Component {
             placeholder="jobLink"
             onChange={this.handleChange}
           />
+
           <select
             name="status"
             value={this.state.status}
             onChange={this.handleChange}
             >
-              <option value="" />
+              <option value="" disabled selected >Select status</option>
               <option value="Applied" >Applied</option>
               <option value="Rejected" >Rejected</option>
               <option value="Accepted" >Accepted</option>
-
           </select>
 
           <select
@@ -83,7 +78,7 @@ class NewLead extends Component {
               value={this.state.applied_thru}
               onChange={this.handleChange}
             >
-              <option value="blank" />
+              <option value="" disabled selected >Select applied thru</option>
               <option value="LINKEDIN">LinkedIn</option>
               <option value="DICE">Dice</option>
               <option value="GOOGLE">Google</option>
@@ -94,6 +89,19 @@ class NewLead extends Component {
               <option value="NETWORKING">Networking</option>
               <option value="OTHER">Other</option>
             </select>
+
+            <select
+            name="position"
+            type="text"
+            onChange={this.handleChange} >
+            
+            <option value="" disabled selected >Select position</option>
+            <option value="Junior Developer">Junior Developer</option>
+            <option value="Front End Web Developer">Front End Web Developer</option>
+            <option value="Software Developer">Software Developer</option>
+            <option value="Web Developer">Web Developer</option>
+            </select>
+
           <button type="submit">Submit</button>
         </form>
       </>

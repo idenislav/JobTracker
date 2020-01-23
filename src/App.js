@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css'
 //import Leads from './components/leads';
 import Routes from './config/Routes';
+import "./Styles/App.css";
 
 
 function App() {

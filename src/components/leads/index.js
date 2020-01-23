@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {LEADS_API} from "../../config/coms";
 import NewLead from './NewLead';
 import Lead from "./Lead"
+import "../../Styles/App.css";
 
 class Leads extends Component {
     state = {
